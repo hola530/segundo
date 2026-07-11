@@ -1,0 +1,136 @@
+body {
+    background-image: url(../img/fondo.png);
+    background-attachment: fixed;
+}
+
+h1{
+    text-align: center;
+    font-size: 2.5rem;
+    background-color: rgb(220, 233, 245);
+    display: inline-block;
+    padding: 1rem;
+}
+
+h1, h2, strong{
+    color: rgb(27, 64, 99)
+}
+
+header{
+    text-align: center;
+}
+
+.header-contenido{
+    text-align: left;
+    background-color: rgb(220, 233, 245);
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.Lozano-Hemmer{
+    max-width: 20rem;
+    height: auto;
+}
+
+blockquote{
+    font-size: 2rem;
+}
+
+.EncabezadoInfo{
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul{
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  margin-top: 10rem;
+  padding: 0;
+}
+
+nav li{
+	display: inline-block;	
+}
+
+nav a{
+    font-size: 1.5em;
+	line-height: 2.2em;
+	padding: 0.4em 1em;
+	text-align: center;
+	text-decoration: none;
+    padding: 1rem;
+    background-color: rgb(176, 211, 244);
+}
+
+a:link{
+	color: rgb(6, 40, 61);
+}
+a:visited{
+	color: rgb(37, 109, 133);
+}
+a:hover{
+	color: rgb(71, 181, 255);
+}
+a:active{
+	color: rgb(223, 246, 255);
+}
+
+main{
+    background-color: rgb(220, 233, 245);
+    margin: 2rem;
+    padding: 2rem;
+    font-size: 1.15rem;
+}
+
+.titulo-publico{
+    text-align: center;
+    background-color: rgb(176, 211, 244);
+}
+
+.imagenes{
+    text-align: center;
+    height: 15rem;
+    width:auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.inicio{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.inicio article{
+    flex: 1;
+}
+
+.arte{
+    height: 18rem;
+    width: auto;
+}
+
+.cont{
+    display: flex;
+    align-items:flex-start;
+    gap: 2rem;
+}
+
+.cont img{
+    width: auto;
+    height: 20rem;
+    flex-shrink: o;
+    margin-left: 30rem;
+}
+
+footer{
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgb(220, 223, 245);
+    background-color: rgb(53, 82, 110);
+    padding: 1rem;
+}

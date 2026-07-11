@@ -1,0 +1,21 @@
+»»»»» Ejercicio «««««
+
+Armar un sistema para controlar el funcionamiento de las luces móviles de las obras de Rafael Lozano-Hemmer.
+
+Se deberán ingresar los datos de la cantidad de obras que se deben desarrollar y, por cada obra, su nombre, la cantidad de luces moviles que utiliza y el tiempo de funcionamiento por día en horas. Ingresar también el consumo por hora de electricidad de cada luz móvil y el costo por kWh. 
+
+Se quiere conocer:
+1. el consumo diario total en kWh entre todas las obras y el consumo diario promedio por obra
+2. la obra con mayor tiempo de funcionamiento y su costo diario
+3. el porcentaje de obras que utilizan más de 20 luces
+
+Una vez que se obtienen los resultados se debe habilitar un botón para reiniciar.
+
+
+»»»»» Tener en cuenta «««««
+
+- Todos los datos deben ser validados.
+- Los datos deben ser ingresados utilizando formularios.
+- Se deben habilitar y deshabilitar las opciones para el ingreso de datos según lo requiera cada momento de ejecución.
+-- Cuando se debe ingresar una cantidad determinada de datos y se cumple esa cantidad, se debe deshabilitar la opción para seguir ingresando.
+-- Las opciones para calcular resultados no se deben habilitar hasta que se haya finalizado la carga de datos necesaria para poder realizar los cálculos. 
