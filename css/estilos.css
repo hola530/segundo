@@ -78,7 +78,7 @@ a:active{
 	color: rgb(223, 246, 255);
 }
 
-main{
+main, .formulario{
     background-color: rgb(220, 233, 245);
     margin: 2rem;
     padding: 2rem;

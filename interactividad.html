@@ -8,7 +8,7 @@
     </head>
     <body>
         <header>
-            <h1>Interactividad, espacio público y arte tecnológico</h1>
+            <h1>Interactividad, Espacio Público y Arte Tecnológico</h1>
 
             <section class="header-contenido">
                 <img src="img/Rafael Lozano-Hemmer-0.png" alt="Lozano-Hemmer" class="Lozano-Hemmer">
@@ -80,15 +80,49 @@
         </main>
 
         <article class="formulario">
+
             <section id="paso1">
                 <h3>Paso 1: ¿Cuántas obras?</h3>
 
                 <input type="number" id="cantidadObras" min="1" placeholder="Ingrese cantidad">
-                
+                <button type="button" id="btnConfirmarCantidad">Confirmar</button>
             </section>
+
+            <section id="paso2" style="display: none;">
+                <h3>Paso 2: Datos de las Obras</h3>
+
+                <input type="text" id="nombreObra" placeholder="Nombre">
+                <input type="number" id="cantidadLuces" min="1" placeholder="Luces">
+                <input type="number" id="tiempo" min="0.1" placeholder="Horas/dia">
+
+                <button type="button" id="btnAgregarObra">Agregar obra</button>
+
+                <div id="listaObras"></div>
+            </section>
+
+            <section id="paso3" style="display: none;">
+                <h3>Paso 3: Consumo y costo</h3>
+
+                <input type="number" id="consumoHora" min="0.01" placeholder="KWh por hora">
+                <input type="number" id="costoKWh" min="0.01" placeholder="$ por KWh">
+
+                <button type="button" id="btnCalcular">Calcular</button>
+            </section>
+
+            <section id="paso4" style="display: none;">
+                <h3>Resultados</h3>
+
+                <div id="resultados"></div>
+
+                <button type="button" id="btnReiniciar">Reiniciar</button>
+
+            </section>
+
         </article>
         
         <footer>Para contactarse escribir al <a href="mailto:rafael@artedigital.com">Gmail</a></footer>
+
+        <script src="js/sistema_luces.js"></script>
 
     </body>
 </html>
