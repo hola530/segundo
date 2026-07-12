@@ -1,7 +1,7 @@
 let cantidadObras = 0;
 let obras = [];
 let consumoHora = 0;
-let costokWh = 0;
+let costoKWh = 0;
 
 
 // ============ PASO 1: CONFIRMAR CANTIDAD ============
@@ -75,13 +75,13 @@ document.querySelector('#btnAgregarObra').addEventListener('click', function() {
 
 // ============ FUNCIÓN: MOSTRAR LISTA DE OBRAS ============
 function mostrarObras() {
-    let listaDiv = document.querySelector('#listaObras');
-    listaDiv.innerHTML = '<h4>Obras ingresadas:</h4>';
+    let html = '<h4>Obras ingresadas:</h4>';
     
-    // Para cada obra, mostrar una línea
     obras.forEach((obra, index) => {
-        listaDiv.innerHTML += `<p>${index + 1}. ${obra.nombre} - ${obra.cantidadLuces} luces, ${obra.tiempo}h/día</p>`;
+        html += `<p>${index + 1}. ${obra.nombre} - ${obra.cantidadLuces} luces, ${obra.tiempo}h/día</p>`;
     });
+    
+    document.querySelector('#listaObras').innerHTML = html;
 }
 
 
@@ -122,7 +122,13 @@ document.querySelector('#btnCalcular').addEventListener('click', function() {
 
 
 // ============ FUNCIÓN: CALCULAR RESULTADOS ============
+// ============ FUNCIÓN: CALCULAR RESULTADOS ============
 function calcularResultados() {
+    
+    if (obras.length === 0) {
+        alert('Debe ingresar al menos una obra');
+        return;
+    }
     
     // ===== RESULTADO 1: CONSUMO TOTAL Y PROMEDIO =====
     let consumoDiarioTotal = 0;
@@ -147,7 +153,7 @@ function calcularResultados() {
     });
     
     let consumoObraMayor = obraMayorTiempo.cantidadLuces * obraMayorTiempo.tiempo * consumoHora;
-    let costoObraMayor = consumoObraMayor * costoKWh;
+    let costoObraMayor = obraMayorTiempo.cantidadLuces * costoKWh;
     
     
     // ===== RESULTADO 3: PORCENTAJE CON MÁS DE 20 LUCES =====
@@ -168,8 +174,8 @@ function mostrarResultados(consumoTotal, consumoPromedio, obraMayor, costoMayor,
     div.innerHTML = `
         <h4>Análisis de Consumo</h4>
         
-        <p><strong>1. Consumo Diario Total:</strong> ${consumoTotal.toFixed(2)} kWh</p>
-        <p><strong>   Consumo Diario Promedio por obra:</strong> ${consumoPromedio.toFixed(2)} kWh/obra</p>
+        <p><strong>1. Consumo Diario Total:</strong> ${consumoTotal.toFixed(2)} <kWh</p>
+        <p><strong>   Consumo Diario Promedio por obra:</strong> ${consumoPromedio.toFixed(2)} <kWh/obra</p>
         
         <p><strong>2. Obra con mayor tiempo de funcionamiento:</strong> ${obraMayor.nombre}</p>
         <p><strong>   Tiempo de funcionamiento:</strong> ${obraMayor.tiempo} horas/día</p>
