@@ -90,7 +90,7 @@ document.querySelector('#btnCalcular').addEventListener('click', function() {
     
     // Tomar datos
     let consumo = document.querySelector('#consumoHora').value;
-    let costo = document.querySelector('#costokWh').value;
+    let costo = document.querySelector('#costoKWh').value;
     
     // Validar que no esté vacío
     if (!consumo || !costo) {
@@ -106,11 +106,11 @@ document.querySelector('#btnCalcular').addEventListener('click', function() {
     
     // Guardar en variables globales
     consumoHora = Number(consumo);
-    costokWh = Number(costo);
+    costoKWh = Number(costo);
     
     // Deshabilitar campos
     document.querySelector('#consumoHora').disabled = true;
-    document.querySelector('#costokWh').disabled = true;
+    document.querySelector('#costoKWh').disabled = true;
     this.disabled = true;
     
     // Calcular resultados
@@ -147,7 +147,7 @@ function calcularResultados() {
     });
     
     let consumoObraMayor = obraMayorTiempo.cantidadLuces * obraMayorTiempo.tiempo * consumoHora;
-    let costoObraMayor = consumoObraMayor * costokWh;
+    let costoObraMayor = consumoObraMayor * costoKWh;
     
     
     // ===== RESULTADO 3: PORCENTAJE CON MÁS DE 20 LUCES =====
@@ -166,7 +166,7 @@ function mostrarResultados(consumoTotal, consumoPromedio, obraMayor, costoMayor,
     let div = document.querySelector('#resultados');
     
     div.innerHTML = `
-        <h4>📊 Análisis de Consumo</h4>
+        <h4>Análisis de Consumo</h4>
         
         <p><strong>1. Consumo Diario Total:</strong> ${consumoTotal.toFixed(2)} kWh</p>
         <p><strong>   Consumo Diario Promedio por obra:</strong> ${consumoPromedio.toFixed(2)} kWh/obra</p>
@@ -187,7 +187,7 @@ document.querySelector('#btnReiniciar').addEventListener('click', function() {
     cantidadObras = 0;
     obras = [];
     consumoHora = 0;
-    costokWh = 0;
+    costoKWh = 0;
     
     // Limpiar paso 1
     document.querySelector('#cantidadObras').value = '';
@@ -203,9 +203,9 @@ document.querySelector('#btnReiniciar').addEventListener('click', function() {
     
     // Limpiar paso 3
     document.querySelector('#consumoHora').value = '';
-    document.querySelector('#costokWh').value = '';
+    document.querySelector('#costoKWh').value = '';
     document.querySelector('#consumoHora').disabled = false;
-    document.querySelector('#costokWh').disabled = false;
+    document.querySelector('#costoKWh').disabled = false;
     document.querySelector('#btnCalcular').disabled = false;
     
     // Ocultar todos los pasos excepto el 1
